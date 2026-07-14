@@ -278,6 +278,30 @@
   .learn-card .cta-btn{margin-top:auto;align-self:flex-start}
   .learn-card.mkt{border-color:color-mix(in srgb,var(--coral) 55%,var(--line));background:color-mix(in srgb,var(--coral) 5%,var(--paper))}
   .learn-card.brain{border-color:color-mix(in srgb,var(--teal) 55%,var(--line));background:color-mix(in srgb,var(--teal) 6%,var(--paper))}
+
+  /* lời chào đầu (thư ngỏ) */
+  .welcome{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--coral);border-radius:16px;box-shadow:var(--shadow);padding:28px 30px;max-width:760px;margin:0 auto}
+  .welcome .wlogo{width:118px;height:auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;display:block;margin:0 auto 14px}
+  .welcome .wlabel{text-align:center;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--coral-deep);font-weight:800;margin-bottom:10px}
+  .welcome .wquote{font-family:var(--serif);font-style:italic;font-size:1.15rem;text-align:center;color:var(--ink);margin:0 0 4px;text-wrap:balance}
+  .welcome .wcite{text-align:center;color:var(--ink-soft);font-size:.9rem;margin:0 0 18px}
+  .welcome p{margin:0 0 12px}
+  .welcome .wsign{margin-top:18px;text-align:right;line-height:1.45}
+  .welcome .wsign .role{color:var(--ink-soft);font-size:.9rem}
+  .welcome .wsign .name{font-weight:800;color:var(--teal-deep);font-size:1.05rem}
+
+  /* footer mới: logo + slogan + địa chỉ 3 miền */
+  .site-footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 0;text-align:center}
+  .foot-logo{width:168px;height:auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 16px;display:block;margin:0 auto 8px}
+  .foot-slogan{color:var(--coral-deep);font-family:var(--serif);font-style:italic;font-size:1.12rem;margin:0 0 22px}
+  .foot-addr{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;text-align:left;max-width:800px;margin:0 auto 20px}
+  .foot-addr .addr{font-size:.9rem;color:var(--ink-soft);line-height:1.5;background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .foot-addr .addr b{color:var(--ink);display:block;margin-bottom:3px}
+  .foot-contact{font-size:.98rem;color:var(--ink-soft);margin:0 0 26px}
+  .foot-contact b{color:var(--teal-deep)}
+  .foot-bar{background:var(--ink);color:#c9d6de;padding:16px 18px;font-size:.85rem;text-align:center}
+  .foot-bar b{color:#fff}
+  @media (max-width:680px){ .welcome{padding:20px 18px} }
 </style>
 
 <header class="hero">
@@ -306,6 +330,24 @@
     </div>
   </div>
 </header>
+
+<!-- LỜI CHÀO ĐẦU -->
+<section style="background:var(--sand)">
+  <div class="wrap">
+    <div class="welcome">
+      <img class="wlogo" src="logo-vinatat.jpg" alt="VINATAT">
+      <div class="wlabel">Lời chào đầu</div>
+      <p class="wquote">"Đến với nhau là sự khởi đầu, cùng nhau làm việc là sự phát triển, nhưng giữ được nhau mới là thành công."</p>
+      <p class="wcite">— Henry Ford</p>
+      <p>Chào bạn, thật vui vì bạn đã có mặt ở đây. Bạn là người mới — và tất cả chỉ vừa mới bắt đầu. Qua <b>khóa học online này</b>, tôi muốn trao cho bạn một công cụ quan trọng của thời đại mới: <b>biết dùng AI</b>.</p>
+      <p>Nó sẽ giúp bạn hòa nhập nhanh cùng các thành viên khác, làm việc đúng và chuẩn, đồng thời hình dung rõ những bước đi sắp tới và <b>vai trò quan trọng của bạn tại VINATAT</b>. Hãy cùng bắt đầu nhé!</p>
+      <div class="wsign">
+        <div class="role">TM Công ty</div>
+        <div class="name">TGĐ · MAI TIẾN TẦN</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TƯ DUY DÙNG AI (lên đầu) -->
 <section style="background:var(--paper);border-bottom:1px solid var(--line)">
@@ -753,12 +795,18 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer class="site-footer">
   <div class="wrap">
-    <div style="font-size:1.3rem;margin-bottom:6px">🌏 <b>VINATAT GROUP</b></div>
-    <p style="margin:0 0 4px">Giáo án đào tạo nội bộ · Chuyến bay VINA-AI 001 · Dùng AI (Claude) cho người mới bắt đầu.</p>
-    <p class="mini" style="margin:0;color:#8aa0ab">Cỗ máy sản xuất các công ty du lịch chuyên nghiệp và bài bản.</p>
+    <img class="foot-logo" src="logo-vinatat.jpg" alt="VINATAT">
+    <p class="foot-slogan">Cùng nhau kiến tạo thịnh vượng</p>
+    <div class="foot-addr">
+      <div class="addr"><b>📍 VP Giao dịch — Hà Nội</b>131 Hoàng Cầu, P. Đống Đa, Hà Nội</div>
+      <div class="addr"><b>📍 VP Đà Nẵng</b>328 Điện Biên Phủ, P. Thanh Khê, Đà Nẵng</div>
+      <div class="addr"><b>📍 VP CS — TP.HCM</b>26A Trần Quốc Thảo, P. Xuân Hòa, TP.HCM</div>
+    </div>
+    <p class="foot-contact">📞 Hotline: <b>0938.345.222</b>&nbsp;&nbsp;·&nbsp;&nbsp;✉ Email: <b>S666@Vietkingtravel.com</b></p>
   </div>
+  <div class="foot-bar"><b>VINATAT GROUP</b> · Giáo án đào tạo nội bộ · Chuyến bay VINA-AI 001 · Dùng AI (Claude)</div>
 </footer>
 
 <script>
