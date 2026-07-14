@@ -572,16 +572,20 @@
       if(ch[i].nodeType===1) ch[i].style.setProperty('--rd', (i*70)+'ms');
     }
   });
-  var vh = window.innerHeight || doc.documentElement.clientHeight;
-  var useIO = 'IntersectionObserver' in window;
-  var io = useIO ? new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:0.12, rootMargin:'0px 0px -6% 0px'}) : null;
-  list.forEach(function(el){
-    el.classList.add('reveal');
-    if(!useIO || el.getBoundingClientRect().top < vh - 40){ el.classList.add('in'); }
-    else { io.observe(el); }
-  });
+  list.forEach(function(el){ el.classList.add('reveal'); });
+  var pending = list.slice();
+  function reveal(){
+    var vh = window.innerHeight || doc.documentElement.clientHeight;
+    for(var i=pending.length-1; i>=0; i--){
+      if(pending[i].getBoundingClientRect().top < vh*0.92){
+        pending[i].classList.add('in');
+        pending.splice(i,1);
+      }
+    }
+  }
+  window.addEventListener('scroll', reveal, {passive:true});
+  window.addEventListener('resize', reveal, {passive:true});
+  reveal();
 })();
 </script>
 </body>
