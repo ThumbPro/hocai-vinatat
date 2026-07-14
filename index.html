@@ -255,6 +255,19 @@
   .cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(232,106,58,.4)}
   .cta-btn.teal{background:var(--teal-deep)}
   @media (max-width:680px){ .mult{grid-template-columns:1fr} }
+
+  /* levels roadmap */
+  code{font-family:Consolas,"Courier New",monospace;background:var(--sky);padding:1px 6px;border-radius:5px;font-size:.86em}
+  .levels{display:grid;gap:14px;margin:20px 0}
+  .lvl{display:grid;grid-template-columns:66px 1fr;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .lvl .lnum{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;align-content:center;color:#fff;text-align:center;line-height:1.05}
+  .lvl .lnum span{font-size:.52rem;letter-spacing:.1em;opacity:.9}
+  .lvl .lnum b{font-size:1.55rem}
+  .lvl h3{font-size:1.14rem;margin:0 0 2px}
+  .lvl .who{font-size:.85rem;color:var(--ink-soft);margin-bottom:8px}
+  .lvl .learn{margin:0 0 6px;font-size:.98rem}
+  .lvl .did{font-size:.95rem;background:var(--sand);border-left:3px solid var(--teal);padding:8px 12px;border-radius:0 8px 8px 0;margin-top:8px}
+  @media (max-width:680px){ .lvl{grid-template-columns:48px 1fr;gap:12px;padding:16px} .lvl .lnum{width:44px;height:44px;border-radius:12px} .lvl .lnum b{font-size:1.25rem} }
 </style>
 
 <header class="hero">
@@ -638,6 +651,64 @@
   </div>
 </section>
 
+<!-- LỘ TRÌNH CẤP ĐỘ -->
+<section style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker"><span class="num">▲</span> LỘ TRÌNH · 4 CẤP ĐỘ DÙNG AI</div>
+    <h2 class="big">Bạn đang ở đâu? <span class="q">— leo từng nấc một</span></h2>
+    <p class="lead">Học AI là hành trình leo dốc. Đây là bản đồ 4 chặng. Trang này đưa bạn qua <b>Level 0–1</b> (Claude chat, không cần cài gì); muốn đi tiếp <b>Level 2–3</b> (Claude Code), xem kênh YouTube ở mục dưới.</p>
+
+    <div class="levels">
+      <div class="lvl">
+        <div class="lnum" style="background:var(--ink-soft)"><span>LEVEL</span><b>0</b></div>
+        <div>
+          <h3>Chưa biết gì → Mở được Claude</h3>
+          <div class="who">Claude chat trên web · không cài gì · ai cũng làm được</div>
+          <p class="learn"><b>🎓 Học:</b> AI là gì, mở claude.ai, gõ câu lệnh đầu tiên, đọc &amp; copy kết quả, nói lại để Claude sửa.</p>
+          <div class="did"><b>✅ Làm được:</b> tự tạo 1 caption / email / đoạn tư vấn dùng được ngay. <b>(Chính là phần đầu trang này.)</b></div>
+        </div>
+      </div>
+
+      <div class="lvl">
+        <div class="lnum" style="background:var(--teal)"><span>LEVEL</span><b>1</b></div>
+        <div>
+          <h3>Dùng Claude chat thành thạo</h3>
+          <div class="who">Vẫn trên web · không cài gì</div>
+          <p class="learn"><b>🎓 Học:</b> Công thức 4 mảnh, trò chuyện nhiều lượt, <b>tải file lên</b> cho Claude đọc, dùng <b>"Dự án" (Project)</b> gom tài liệu, câu lệnh nâng cao "giao cả đầu việc + ràng buộc an toàn".</p>
+          <div class="did"><b>✅ Làm được:</b> giao AI nguyên một việc nhiều bước — viết loạt bài, phân tích hợp đồng, soạn email hàng loạt. <b>(Phần "Câu lệnh nâng cao" ở trên.)</b></div>
+        </div>
+      </div>
+
+      <div class="lvl">
+        <div class="lnum" style="background:var(--gold)"><span>LEVEL</span><b>2</b></div>
+        <div>
+          <h3>Bước sang Claude Code <span style="font-size:.8rem;color:var(--ink-soft);font-weight:400">(cần cài phần mềm)</span></h3>
+          <div class="who">Cho người muốn đi sâu / bạn IT · AI làm việc trực tiếp với file &amp; dự án</div>
+          <p class="learn"><b>💡 Là gì:</b> Claude Code là bản AI chạy trong <b>máy tính (cửa sổ lệnh)</b> — mạnh hơn hẳn bản chat, sửa được nhiều file cùng lúc.</p>
+          <p class="learn"><b>🎓 Học:</b> cài đặt (Node + <code>npm install -g @anthropic-ai/claude-code</code>); tư duy <b>"vibe coding"</b> (mô tả ý muốn → AI làm → mình duyệt); file <b>CLAUDE.md</b> = bộ não &amp; luật của dự án; dọn ngữ cảnh <code>/compact</code>, <code>/clear</code>; chọn model tiết kiệm (<b>Haiku</b> nhanh-rẻ · <b>Sonnet</b> cân bằng · <b>Opus 4.8</b> việc khó); phân quyền cho AI (cho phép / cấm).</p>
+          <div class="did"><b>✅ Làm được:</b> giao cả một dự án nhiều file — ví dụ <b>dựng nguyên website như trang hocai.vinatat.vn này!</b>, xử lý tài liệu hàng loạt.</div>
+        </div>
+      </div>
+
+      <div class="lvl">
+        <div class="lnum" style="background:var(--coral-deep)"><span>LEVEL</span><b>3</b></div>
+        <div>
+          <h3>Cao thủ — tự động hóa &amp; điều phối đội AI</h3>
+          <div class="who">Dựng "dây chuyền" tự động chạy thay người</div>
+          <p class="learn"><b>🎓 Học:</b> <b>MCP</b> (nối AI với GitHub, Google Drive, CRM, cơ sở dữ liệu) · <b>Hooks</b> (tự chạy: kiểm tra, chặn thao tác nguy hiểm) · <b>Sub-agents</b> (đội trợ lý chuyên biệt: nghiên cứu, soát lỗi) · điều phối <b>nhiều agent thành 1 workflow</b> chạy song song · <b>bảo mật</b> (secret để trong file .env, không dán mật khẩu vào chat, chỉ cấp quyền cần thiết).</p>
+          <div class="did"><b>✅ Làm được:</b> tự động hóa phòng kế toán, cắt hàng loạt video, viết cả cuốn sách bằng đội agent. <b>🏆 Đây là tầng anh Mai Tiến Tần đang dùng để vận hành VINATAT.</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout c-warm">
+      <div class="lbl">⚠️ Luật vàng — đúng ở MỌI cấp độ</div>
+      <p style="margin:0">Level nào cũng phải: <b>kiểm tra lại số liệu</b>, không để AI bịa, <b>không nhập thông tin mật</b> của khách, <b>đọc lại trước khi gửi/đăng</b>. AI càng mạnh, trách nhiệm của người dùng càng lớn.</p>
+    </div>
+    <p class="mini" style="margin-top:12px">Lộ trình tham khảo &amp; mở rộng từ tài liệu <i>Claude Code 101</i> (phandonggiang.com) + kinh nghiệm thực chiến VINATAT.</p>
+  </div>
+</section>
+
 <!-- ĐI XA HƠN -->
 <section style="background:var(--paper);border-top:1px solid var(--line)">
   <div class="wrap">
@@ -674,7 +745,7 @@
 (function(){
   var doc = document;
   if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var SEL = '.kicker, h2.big, .lead, .card, .callout, .dept, .prompt-box, .browser, .step, .formula';
+  var SEL = '.kicker, h2.big, .lead, .card, .callout, .dept, .prompt-box, .browser, .step, .formula, .lvl';
   var list = [].slice.call(doc.querySelectorAll(SEL)).filter(function(el){
     return !(el.parentElement && el.parentElement.closest(SEL));
   });
