@@ -268,6 +268,16 @@
   .lvl .learn{margin:0 0 6px;font-size:.98rem}
   .lvl .did{font-size:.95rem;background:var(--sand);border-left:3px solid var(--teal);padding:8px 12px;border-radius:0 8px 8px 0;margin-top:8px}
   @media (max-width:680px){ .lvl{grid-template-columns:48px 1fr;gap:12px;padding:16px} .lvl .lnum{width:44px;height:44px;border-radius:12px} .lvl .lnum b{font-size:1.25rem} }
+
+  /* learn cards: viền đẹp + cân bằng chiều cao */
+  .learn-card{display:flex;flex-direction:column;border-width:2px;border-radius:18px;padding:24px 24px 26px}
+  .learn-card .ic-big{font-size:1.9rem;margin-bottom:4px}
+  .learn-card ul.clean{margin:6px 0 8px}
+  .learn-card ul.clean li{padding:5px 0 5px 28px;font-size:.95rem}
+  .learn-card ul.clean li::before{top:5px}
+  .learn-card .cta-btn{margin-top:auto;align-self:flex-start}
+  .learn-card.mkt{border-color:color-mix(in srgb,var(--coral) 55%,var(--line));background:color-mix(in srgb,var(--coral) 5%,var(--paper))}
+  .learn-card.brain{border-color:color-mix(in srgb,var(--teal) 55%,var(--line));background:color-mix(in srgb,var(--teal) 6%,var(--paper))}
 </style>
 
 <header class="hero">
@@ -716,16 +726,26 @@
     <h2 class="big">Học thêm để <span class="q">nhân với AI ra kết quả lớn hơn</span></h2>
     <p class="lead">Nhớ công thức đầu trang chứ? Muốn nhân với AI ra số lớn, hãy nâng "con số của bạn" bằng hai việc này:</p>
     <div class="grid2">
-      <div class="card">
-        <div style="font-size:1.7rem">🎬</div>
-        <h3 style="font-size:1.15rem;margin:6px 0 4px">Học Marketing cùng anh Mai Tiến Tần</h3>
-        <p class="mini" style="margin:0">Loạt video hướng dẫn Marketing &amp; làm YouTube trên kênh của anh Mai Tiến Tần — xem miễn phí, áp dụng ngay cho công việc ở VINATAT.</p>
+      <div class="card learn-card mkt">
+        <div class="ic-big">🎬</div>
+        <h3 style="font-size:1.15rem;margin:2px 0 4px">Học Marketing cùng anh Mai Tiến Tần</h3>
+        <p class="mini" style="margin:0 0 2px">Loạt video miễn phí trên kênh YouTube của anh Mai Tiến Tần — xem là áp dụng được ngay cho VINATAT:</p>
+        <ul class="clean">
+          <li>Cách viết content &amp; đặt tiêu đề cuốn hút</li>
+          <li>Làm video YouTube từ con số 0</li>
+          <li>Hướng dẫn cài đặt "Bộ não thứ 2" từng bước</li>
+        </ul>
         <a class="cta-btn" href="https://www.youtube.com/watch?v=M4q80eQai-Y&list=PLIPsoch3WMMo" target="_blank" rel="noopener">▶ Xem trên YouTube</a>
       </div>
-      <div class="card">
-        <div style="font-size:1.7rem">🧠</div>
-        <h3 style="font-size:1.15rem;margin:6px 0 4px">Bộ não thứ 2 là gì?</h3>
-        <p class="mini" style="margin:0"><b>Bộ não thứ 2</b> là nơi bạn lưu lại mọi kiến thức, tài liệu, ghi chú một cách có tổ chức để AI đọc và làm việc cùng. Thay vì nhớ trong đầu (dễ quên), bạn "gửi" kiến thức ra ngoài — AI + Bộ não thứ 2 giúp bạn tra cứu, viết, quyết định nhanh gấp nhiều lần. Đây chính là cách <b>nâng "con số của bạn"</b> ở đầu trang.</p>
+      <div class="card learn-card brain">
+        <div class="ic-big">🧠</div>
+        <h3 style="font-size:1.15rem;margin:2px 0 4px">Bộ não thứ 2 là gì?</h3>
+        <p class="mini" style="margin:0 0 2px"><b>Bộ não thứ 2</b> là nơi lưu mọi kiến thức, tài liệu, ghi chú của bạn một cách có tổ chức để AI đọc và làm việc cùng. Vì sao quan trọng:</p>
+        <ul class="clean">
+          <li>Không lo quên — kiến thức nằm ngoài "cái đầu"</li>
+          <li>AI + Bộ não thứ 2 = tra cứu, viết, quyết định nhanh gấp bội</li>
+          <li>Chính là cách nâng "con số của bạn" ở đầu trang</li>
+        </ul>
         <a class="cta-btn teal" href="https://s.vinatat.vn/jqvixj5629" target="_blank" rel="noopener">📖 Đọc sách Bộ não thứ 2</a>
       </div>
     </div>
