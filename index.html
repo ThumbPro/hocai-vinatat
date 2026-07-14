@@ -193,7 +193,7 @@
     .ticket .stub::before{top:-10px;left:calc(30% - 10px)}.ticket .stub::after{left:auto;right:calc(30% - 10px);bottom:auto;top:-10px}
     .stub .v{margin-bottom:8px}
     .stub .barcode{width:100%;margin-top:12px}
-    .grid2,.grid3{grid-template-columns:1fr}
+    .grid2,.grid3,.mult{grid-template-columns:1fr}
     .formula{flex-direction:column}.fplus{transform:rotate(90deg)}
     .step{grid-template-columns:46px 1fr;gap:14px}
     .stepnum{width:46px;height:46px;font-size:1.25rem;border-radius:13px}
@@ -240,6 +240,20 @@
     .hero .brandline,.hero .ticket,.route .path svg,.stub .barcode,.step.in .stepnum{animation:none!important}
     .dept:hover .ic{transform:none!important}
   }
+
+  /* ---------- components: tư duy nhân & học thêm ---------- */
+  .mult{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+  .mult .m{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 14px;text-align:center;box-shadow:var(--shadow)}
+  .mult .m.zero{border-color:color-mix(in srgb,var(--coral) 40%,var(--line))}
+  .mult .m.win{border-color:color-mix(in srgb,var(--teal) 45%,var(--line));background:var(--sky)}
+  .mult .eq{font-size:.85rem;color:var(--ink-soft);margin:2px 0}
+  .mult .op{font-size:1.05rem;margin:6px 0;font-weight:600}
+  .mult .res{font-size:1.9rem;font-weight:800;line-height:1.1;margin:2px 0}
+  .mult .zero .res{color:var(--coral-deep)}
+  .mult .win .res{color:var(--teal-deep)}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:var(--coral);color:#fff;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:12px;box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(232,106,58,.4)}
+  .cta-btn.teal{background:var(--teal-deep)}
 </style>
 
 <header class="hero">
@@ -268,6 +282,39 @@
     </div>
   </div>
 </header>
+
+<!-- TƯ DUY DÙNG AI (lên đầu) -->
+<section style="background:var(--paper);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker"><span class="num">★</span> ĐỌC ĐẦU TIÊN · TƯ DUY DÙNG AI</div>
+    <h2 class="big">AI là cấp số nhân <span class="q">— nó nhân cái BẠN đang có</span></h2>
+    <p class="lead">AI không biến người tay trắng thành thiên tài. Nó <b>nhân lên</b> kiến thức, kỹ năng và tư duy mà bạn <b>đã có sẵn</b>. Hãy nhìn phép tính này:</p>
+    <div class="mult">
+      <div class="m zero">
+        <div class="eq">Bạn = 0 (không biết gì)</div>
+        <div class="op">0 × AI</div>
+        <div class="res">= 0</div>
+        <div class="eq">Nhân gì cũng vẫn 0 ❌</div>
+      </div>
+      <div class="m">
+        <div class="eq">Bạn = 1</div>
+        <div class="op">1 × AI <small>(×100)</small></div>
+        <div class="res">= 100</div>
+        <div class="eq">Đã tốt 👍</div>
+      </div>
+      <div class="m win">
+        <div class="eq">Bạn = 2</div>
+        <div class="op">2 × AI <small>(×100)</small></div>
+        <div class="res">= 200</div>
+        <div class="eq">Càng giỏi, nhân càng lớn ✅</div>
+      </div>
+    </div>
+    <div class="callout c-gold">
+      <div class="lbl">💡 Bài học cốt lõi</div>
+      <p style="margin:0">Muốn AI giúp bạn mạnh gấp bội, đừng chỉ trông chờ vào AI — hãy <b>tăng "con số của chính mình"</b>: hiểu tour, hiểu khách, rèn nghề, đọc thêm mỗi ngày. <b>Bạn càng giỏi, AI càng biến bạn thành cao thủ.</b> (Cách nâng "con số của bạn" nhanh nhất là xây <b>Bộ não thứ 2</b> — xem cuối trang.)</p>
+    </div>
+  </div>
+</section>
 
 <!-- HÀNH KHÁCH ĐỌC GÌ -->
 <section>
@@ -539,6 +586,23 @@
   </div>
 </section>
 
+<!-- CÂU LỆNH NÂNG CAO -->
+<section>
+  <div class="wrap">
+    <div class="kicker"><span class="num">⚡</span> KHI ĐÃ QUEN · BIẾN AI THÀNH NHÂN VIÊN</div>
+    <h2 class="big">Câu lệnh nâng cao <span class="q">— giao cả một đầu việc cho AI</span></h2>
+    <p class="lead">Khi đã quen, bạn có thể giao cho AI nguyên một công việc nhiều bước — như giao cho nhân viên. Bí quyết: <b>Vai trò + Kết quả cần đạt + Các bước + Ràng buộc an toàn.</b></p>
+
+    <div class="prompt-box" style="margin-bottom:12px"><b style="color:var(--gold)">① Trợ lý phòng Kế toán:</b><br>Từ hôm nay em là trợ lý của phòng Kế toán VINATAT. Việc hôm nay: đối chiếu công nợ vé. Kết quả cần đạt: nhập liệu vào phần mềm kế toán ở trạng thái chưa lưu chứng từ.<br>Bước 1: Lấy dữ liệu công nợ từ <span style="color:#f0a">(nguồn của phòng)</span>.<br>Bước 2: Đối chiếu với báo cáo hãng bay và danh sách trên CRM.<br>Bước 3: Nhập vào file mẫu, kiểm tra đúng nhà cung cấp.<br><b>Không được bịa số liệu</b>; chỗ nào chưa rõ thì hỏi lại chị.</div>
+
+    <div class="prompt-box" style="margin-bottom:12px"><b style="color:var(--gold)">② Đổi cách viết content Marketing:</b><br>Bạn là trưởng phòng Marketing du lịch. Hãy viết lại <span style="color:#f0a">(bài đăng này)</span> theo phong cách kể chuyện, chạm cảm xúc, có câu hook mở đầu và lời kêu gọi rõ ràng. Giữ đúng sự thật, không hứa hẹn quá lời.</div>
+
+    <div class="prompt-box"><b style="color:var(--gold)">③ Viết sách / cẩm nang:</b><br>Căn cứ tài liệu tôi gửi (hồ sơ khách hàng, hệ thống từ khóa, kiến thức), hãy viết cuốn cẩm nang giúp <span style="color:#f0a">(đối tượng)</span>, ngôn ngữ dễ hiểu. Được bổ sung kiến thức nhưng phải ghi rõ nguồn và đánh dấu phần bạn tự thêm. Chỗ nào chưa rõ thì hỏi lại tôi.</div>
+
+    <div class="callout c-teal" style="margin-top:16px"><div class="lbl">🧭 Nhận ra chưa?</div><p style="margin:0">Câu lệnh nâng cao chỉ là <b>Công thức 4 mảnh</b> ở trên, cộng thêm <b>các bước</b> và <b>ràng buộc an toàn</b> (đúng 4 Luật vàng của mình). Càng giao rõ, AI càng làm chuẩn.</p></div>
+  </div>
+</section>
+
 <!-- LUẬT VÀNG AN TOÀN -->
 <section>
   <div class="wrap">
@@ -570,6 +634,30 @@
       <div class="lbl">🎁 Mục tiêu của bạn hôm nay</div>
       <p style="margin:0">Kết thúc buổi học, mỗi người <b>nộp lại 1 bài viết do mình tạo cùng Claude</b> cho tuyến tour mình phụ trách. Đó là "tấm vé" chứng minh bạn đã lên máy bay thành công! ✈️</p>
     </div>
+  </div>
+</section>
+
+<!-- ĐI XA HƠN -->
+<section style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker"><span class="num">→</span> ĐI XA HƠN · NÂNG "CON SỐ CỦA BẠN"</div>
+    <h2 class="big">Học thêm để <span class="q">nhân với AI ra kết quả lớn hơn</span></h2>
+    <p class="lead">Nhớ công thức đầu trang chứ? Muốn nhân với AI ra số lớn, hãy nâng "con số của bạn" bằng hai việc này:</p>
+    <div class="grid2">
+      <div class="card">
+        <div style="font-size:1.7rem">🎬</div>
+        <h3 style="font-size:1.15rem;margin:6px 0 4px">Học Marketing cùng anh Mai Tiến Tần</h3>
+        <p class="mini" style="margin:0">Loạt video hướng dẫn Marketing &amp; làm YouTube trên kênh của anh Mai Tiến Tần — xem miễn phí, áp dụng ngay cho công việc ở VINATAT.</p>
+        <a class="cta-btn" href="https://www.youtube.com/watch?v=M4q80eQai-Y&list=PLIPsoch3WMMo" target="_blank" rel="noopener">▶ Xem trên YouTube</a>
+      </div>
+      <div class="card">
+        <div style="font-size:1.7rem">🧠</div>
+        <h3 style="font-size:1.15rem;margin:6px 0 4px">Bộ não thứ 2 là gì?</h3>
+        <p class="mini" style="margin:0"><b>Bộ não thứ 2</b> là nơi bạn lưu lại mọi kiến thức, tài liệu, ghi chú một cách có tổ chức để AI đọc và làm việc cùng. Thay vì nhớ trong đầu (dễ quên), bạn "gửi" kiến thức ra ngoài — AI + Bộ não thứ 2 giúp bạn tra cứu, viết, quyết định nhanh gấp nhiều lần. Đây chính là cách <b>nâng "con số của bạn"</b> ở đầu trang.</p>
+        <a class="cta-btn teal" href="https://s.vinatat.vn/jqvixj5629" target="_blank" rel="noopener">📖 Đọc sách Bộ não thứ 2</a>
+      </div>
+    </div>
+    <div class="callout c-teal" style="margin-top:16px"><p style="margin:0">👉 Trên kênh YouTube còn có <b>thư mục hướng dẫn cài đặt Bộ não thứ 2</b> từng bước — xem để tự dựng bộ não thứ 2 cho riêng mình, rồi ghép với AI.</p></div>
   </div>
 </section>
 
