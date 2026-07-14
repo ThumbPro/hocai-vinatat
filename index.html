@@ -194,27 +194,29 @@
   @keyframes barcodeIn{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
   @keyframes popNum{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
 
-  .kicker,h2.big,.lead,.card,.callout,.dept,.prompt-box,.browser,.formula,.step{
-    transition:opacity .55s ease, transform .5s cubic-bezier(.22,.61,.36,1), box-shadow .3s ease;
-  }
-  .reveal{opacity:0;transform:translateY(28px)}
-  .reveal.in{opacity:1;transform:none}
+  /* scroll reveal: ẩn TỨC THÌ (không transition), chỉ chạy transition KHI hiện (.in) */
+  .reveal{opacity:0;transform:translateY(24px)}
+  .reveal.in{opacity:1;transform:none;
+    transition:opacity .6s ease, transform .6s cubic-bezier(.22,.61,.36,1);
+    transition-delay:var(--rd,0ms)}
 
   .hero .brandline{animation:floatIn .7s .05s both}
   .hero .ticket{animation:heroRise .9s .18s both}
   .route .path svg{animation:planeFly 1.5s .9s both}
   .stub .barcode{animation:barcodeIn 1s 1.1s both}
 
-  .dept:hover,.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(27,42,56,.15)}
-  .prompt-box:hover{transform:translateY(-2px)}
+  /* hover: nhấc bằng đổ bóng (không dùng transform nên không đụng hiệu ứng hiện) */
+  .card,.dept,.prompt-box{transition:box-shadow .3s ease}
+  .dept:hover,.card:hover{box-shadow:0 14px 34px rgba(27,42,56,.17)}
   .dept .ic{transition:transform .3s ease}
   .dept:hover .ic{transform:scale(1.12) rotate(-6deg)}
   .step.in .stepnum{animation:popNum .55s cubic-bezier(.34,1.56,.64,1) both}
 
   @media (prefers-reduced-motion:reduce){
     .reveal{opacity:1!important;transform:none!important}
+    .reveal.in{transition:none!important}
     .hero .brandline,.hero .ticket,.route .path svg,.stub .barcode,.step.in .stepnum{animation:none!important}
-    .dept:hover,.card:hover,.prompt-box:hover,.dept:hover .ic{transform:none!important}
+    .dept:hover .ic{transform:none!important}
   }
 </style>
 
@@ -567,7 +569,7 @@
   });
   [].forEach.call(doc.querySelectorAll('.grid2, .grid3'), function(g){
     for(var i=0, ch=g.children, n=ch.length; i<n; i++){
-      if(ch[i].nodeType===1) ch[i].style.transitionDelay = (i*70)+'ms';
+      if(ch[i].nodeType===1) ch[i].style.setProperty('--rd', (i*70)+'ms');
     }
   });
   var vh = window.innerHeight || doc.documentElement.clientHeight;
